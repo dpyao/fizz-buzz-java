@@ -1,6 +1,10 @@
 package com.thoughtworks;
 
 public class FizzBuzz {
+    public String Fizz = "Fizz";
+    public String Buzz = "Buzz";
+    public String Whizz = "Whizz";
+
     public Boolean isNumberCanDivided (int number, int divisor) {
         return number % divisor == 0;
     }
@@ -9,21 +13,21 @@ public class FizzBuzz {
         String numberString = Integer.toString(number);
 
         if(numberString.contains("7"))
-            return "Fizz";
+            return Fizz;
         if(numberString.contains("5"))
-            return "BuzzWhizz";
+            return Buzz + Whizz;
         if(numberString.contains("3"))
-            return "Fizz";
+            return Fizz;
 
         if(this.isNumberCanDivided(number, 3) || this.isNumberCanDivided(number, 5) || this.isNumberCanDivided(number, 7)) {
             String result = "";
 
             if(this.isNumberCanDivided(number, 3))
-                result += "Fizz";
+                result += Fizz;
             if(this.isNumberCanDivided(number, 5))
-                result += "Buzz";
+                result += Buzz;
             if(this.isNumberCanDivided(number, 7))
-                result += "Whizz";
+                result += Whizz;
 
             return result;
         }
