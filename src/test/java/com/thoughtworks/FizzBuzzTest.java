@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
 
     @Test
-    public void should_return_Fizz_when_input_number_include_7() {
+    public void should_return_Fizz_when_input_number_include_7_Or_3() {
         //given
         FizzBuzz fizzBuzz = new FizzBuzz();
 
@@ -19,11 +19,19 @@ public class FizzBuzzTest {
         String actualOne = fizzBuzz.getOutputString(7);
         String actualTwo = fizzBuzz.getOutputString(17);
         String actualThree = fizzBuzz.getOutputString(70);
+        String actualFour = fizzBuzz.getOutputString(3);
+        String actualFive = fizzBuzz.getOutputString(13);
+        String actualSix = fizzBuzz.getOutputString(37);
+        String actualSeven = fizzBuzz.getOutputString(75);
 
         //then
         assertEquals(actualOne,"Fizz");
         assertEquals(actualTwo,"Fizz");
         assertEquals(actualThree,"Fizz");
+        assertEquals(actualFour,"Fizz");
+        assertEquals(actualFive,"Fizz");
+        assertEquals(actualSix,"Fizz");
+        assertEquals(actualSeven,"Fizz");
     }
 
     @Test
@@ -35,10 +43,12 @@ public class FizzBuzzTest {
         String actualOne = fizzBuzz.getOutputString(5);
         String actualTwo = fizzBuzz.getOutputString(25);
         String actualThree = fizzBuzz.getOutputString(50);
+        String actualFour = fizzBuzz.getOutputString(35);
 
         //then
         assertEquals(actualOne,"BuzzWhizz");
         assertEquals(actualTwo,"BuzzWhizz");
         assertEquals(actualThree,"BuzzWhizz");
+        assertEquals(actualFour,"BuzzWhizz");
     }
 }

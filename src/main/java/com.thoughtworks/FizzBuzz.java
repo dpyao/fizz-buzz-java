@@ -8,6 +8,8 @@ public class FizzBuzz {
             return "Fizz";
         if(numberString.contains("5"))
             return "BuzzWhizz";
+        if(numberString.contains("3"))
+            return "Fizz";
 
         return numberString;
     }
